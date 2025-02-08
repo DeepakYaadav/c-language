@@ -1,3 +1,5 @@
 a.out
 c-language/*.o
 c-language/a.out
+c-language/*.o
+c-language/a.out
