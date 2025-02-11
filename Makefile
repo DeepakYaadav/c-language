@@ -1,3 +1,5 @@
+Embedded: VolatileInC.c
+	riscv64-unknown-elf-gcc -O1 -S VolatileInC.c
 
 assemblby: sum.c
 	riscv64-unknown-elf-gcc -O0 -nostdlib -march=rv32i -mabi=ilp32 sum.c -S
