@@ -16,12 +16,12 @@ int main()
 {
     void (*func_ptr)(void); //function pointer declaration. returntype and argument. 
     //return_dataType(*fun_ptr_Name)(input argument)
-    
+
     func_ptr =function_1;
-    func_ptr();
+    func_ptr(); //*(derefrencing operator not required), as if we just calling a function
 
     func_ptr = function_2;
-    func_ptr ();
+    func_ptr ();//*(derefrencing operator not required),as if we just calling a function.
 
     return 0;
 }
