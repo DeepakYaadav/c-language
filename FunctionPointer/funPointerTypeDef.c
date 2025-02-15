@@ -12,13 +12,15 @@ void function_2(int b)
     printf("function_2()= %d\n", b);
     
 }
+
+typedef void (*func_ptr)(int arg);
 int main()
 {
     //void (*func_ptr)(int arg); //function pointer declaration. returntype and argument. 
                                //return_dataType(*fun_ptr_Name)(input argument)
 
-    typedef void (*func_ptr)(int arg); //typedef 
-    func_ptr pf;             // name of func_ptr changed to pf;
+   // typedef void (*func_ptr)(int arg); //typedef can define outside also. 
+    func_ptr pf;             // name of func_ptr changed to pf,define the variable of function pointer type. 
 
     //func_ptr =function_1; //parenthesis not required here just like *p =&a;
     //func_ptr(10);        //*(derefrencing operator not required), as if we just calling a function
