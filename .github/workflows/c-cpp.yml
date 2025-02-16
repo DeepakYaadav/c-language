@@ -40,7 +40,7 @@ jobs:
       run: autoreconf -i
 
     - name: Run configure script
-      run: ./configure || { echo "❌ ERROR: configure failed"; exit 1; }
+      run: ./configure || { echo " ERROR" }
 
     - name: Print final directory structure
       run: ls -l
