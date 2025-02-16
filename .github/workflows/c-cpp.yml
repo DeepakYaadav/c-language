@@ -15,6 +15,10 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
 
+    - name: Print working directory
+      run: pwd && ls -l
+
+
     - name: Install dependencies
       run: sudo apt-get update && sudo apt-get install -y autoconf automake libtool
 
@@ -23,4 +27,12 @@ jobs:
     
     - name: Run configure script
       run: ./configure
+      
+    - name: Run autogen.sh
+      run: ./autogen.sh
+
+
+    - name: Make configure executable
+      run: chmod +x configure
+
   
