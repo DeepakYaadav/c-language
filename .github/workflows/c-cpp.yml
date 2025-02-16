@@ -8,31 +8,39 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
 
-    - name: Print working directory
+    - name: Print working directory and files
       run: pwd && ls -l
-
 
     - name: Install dependencies
       run: sudo apt-get update && sudo apt-get install -y autoconf automake libtool
 
-    - name: Generate configure script 
+    - name: Check for configure.ac
+      run: |
+        if [ ! -f configure.ac ]; then
+          echo "❌ ERROR: configure.ac not found! Make sure it's in the repository."
+          exit 1
+        fi
+
+    - name: Run autogen.sh (if exists)
+      run: |
+        if [ -f autogen.sh ]; then
+          chmod +x autogen.sh
+          ./autogen.sh
+        else
+          echo "⚠️ autogen.sh not found. Skipping."
+        fi
+
+    - name: Generate configure script
       run: autoreconf -i
-    
+
     - name: Run configure script
-      run: ./configure
-      
-    - name: Run autogen.sh
-      run: ./autogen.sh
+      run: ./configure || { echo "❌ ERROR: configure failed"; exit 1; }
 
-
-    - name: Make configure executable
-      run: chmod +x configure
-
-  
+    - name: Print final directory structure
+      run: ls -l
