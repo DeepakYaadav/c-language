@@ -1,0 +1,19 @@
+------Bit Manipulation------ 
+
+Shift bit pattern left by 1:-->  Multiply by 2
+Shift bit pattern right by 1:--> Divide by 2
+
+(1<<31)>>1= -2^31/2
+To preserve the sign of a signed int MSB bit(bit 1), will get replicated.
+
+
+Airthmatic rightshift vs logical right shift. 
+In Airthmatic left shift MSB or signed bit gets copied to preserve the sign ,specical behaviour signed int.
+Logical right shit where MSB is not preserve. it moved and zero gets padded
+
+
+-----Bit Masking------
+Set:- OR with 1 
+Clear Bit :-- AND with 0
+Target the bits with shift operations.
+
