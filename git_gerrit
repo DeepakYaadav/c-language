@@ -18,3 +18,32 @@ git checkout file_name:- thow away the current changes/don' take the latest chna
 
 git status:- gives the idea of tracked /not tracked --> git add . (Put the file in stagging area)-->
 git commit(remember then changes)
+
+status-->add-->commit-->git log 
+
+commit c895d3e4403b8e416842e6ade5f90749a4bf94ad (HEAD -> main)
+Author: Deepak Kumar Yadav <yadav1996deepak1@gmail.com>
+Date:   Sun Mar 16 06:05:59 2025 +0000
+
+    git_gerrit Note
+
+c895d3e4403b8e416842e6ade5f90749a4bf94ad :- Unique ID for this commit
+
+Head will tracking Main(master branch) -->master/main points to latest commit. 
+
+To discard the changes:--- use git diff to find out the diff and analyse
+
+git checkout file_name:--- discard the changes after saving the changes.  
+
+------To reset the git file after the commiting----
+git track the chnages as delta only, dont create a copy every time.only stored the diff in each commit. 
+
+
+3ways to reset. 
+Hard reset :-git reset --hard(Discard the commit and discard the changes)
+Soft reset :- git reset --soft (Discard the commit retains the chnages.)
+
+
+git reset --hard HEAD~1  -->(reset till head one level up)
+git reset --soft(Unique ID or HEAD~1)--> (soft reset till head one level up)--->use to to add more changes in the files. 
+
