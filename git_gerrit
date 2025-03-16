@@ -1,0 +1,20 @@
+clone:--> Make a copy of it.
+git:-->version management/control system
+commit:- asking git to remember the changes/version. 
+
+git init:-To initialised the directory
+git status:- To check what is track/untracked
+git commit:- explicitly tells to remember the changes/version.
+git add file_name/dir:- To save the files. 
+git log:- history of version. 
+
+tree .git/ :--- to check the teree veiw, git track the changes/commit as object within the git directory. 
+git diff:- To find out the diff between version. 
+
+git reset --hard objectID(from gitlog):- throw away changes ,reset the git memory at particular ID. 
+
+git reset:- reset the memory of git/discard the changes. 
+git checkout file_name:- thow away the current changes/don' take the latest chnages.  
+
+git status:- gives the idea of tracked /not tracked --> git add . (Put the file in stagging area)-->
+git commit(remember then changes)
